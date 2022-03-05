@@ -39,10 +39,15 @@
                   >E-mail:
                 </label>
                 <input
-                  class="shadow appearance-none border rounded w-full focus:outline-none focus:outline-stone-300"
+                  class="shadow appearance-none border rounded w-full focus:outline-none focus:outline-stone-300
+                  disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none
+      invalid:border-pink-500 invalid:text-pink-600
+      focus:invalid:border-pink-500 focus:invalid:ring-pink-500"
                   type="email"
                   id="email"
                   name="email"
+                  oninvalid="this.setCustomValidity('Please enter a correct e-mail')"
+                  oninput="this.setCustomValidity('')"
                   required
                 />
               </div>
@@ -64,10 +69,16 @@
                   >Password:</label
                 >
                 <input
-                  class="shadow appearance-none border rounded w-full focus:outline-none focus:outline-stone-300"
+                  class="shadow appearance-none border rounded w-full focus:outline-none focus:outline-stone-300
+                  disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none
+      invalid:border-pink-500 invalid:text-pink-600
+      focus:invalid:border-pink-500 focus:invalid:ring-pink-500"
                   type="password"
                   id="signup-password"
                   name="signup-password"
+                  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                  oninvalid="this.setCustomValidity('The password length must be greater than or equal to 8, contain one or more uppercase characters, one or more lowercase characters, one or more numeric values, one or more special characters')"
+                  oninput="this.setCustomValidity('')"
                   required
                 />
               </div>
@@ -123,5 +134,6 @@
         </div>
       </div>
     </div>
+    <script src="script.js"></script>
   </body>
 </html>
