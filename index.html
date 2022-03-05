@@ -1,52 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/css/main.css" rel="stylesheet" />
+    <title>Signup/Login</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="/css/main.css" rel="stylesheet">
-  <title>Signup/Login</title>
-</head>
+  <body>
+    <div class="bg-slate-200 w-full h-screen">
+      <div class="flex justify-center items-center">
+        <div class="w-full max-w-xs p-2 block">
+          <form
+            id="signup"
+            class="bg-white shadow-md rounded px-8 pt-6 pb-4"
+          >
+            <fieldset>
+              <legend class="font-bold text-2xl text-center mb-4">
+                Sign up
+              </legend>
 
+              <div class="mb-4">
+                <label class="block mb-1 text-grey-700" for="signup-username"
+                  >Username:</label
+                >
+                <input
+                  class="shadow appearance-none border rounded w-full focus:outline-none focus:outline-stone-300"
+                  type="text"
+                  id="signup-username"
+                  name="signup-username"
+                  required
+                />
+              </div>
 
-<div class="container">
-  <form id="signup" class="border shadow">
-    <fieldset>
-      <legend>Sign up</legend>
+              <div class="mb-4">
+                <label class="block mb-1 text-grey-700" for="email"
+                  >E-mail:
+                </label>
+                <input
+                  class="shadow appearance-none border rounded w-full focus:outline-none focus:outline-stone-300"
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                />
+              </div>
+              <div class="mb-4">
+                <label class="block mb-1 text-grey-700" for="fname"
+                  >Full name:
+                </label>
+                <input
+                  class="shadow appearance-none border rounded w-full focus:outline-none focus:outline-stone-300"
+                  type="text"
+                  id="fname"
+                  name="fname"
+                  required
+                />
+              </div>
 
-      <label for="username">Username:</label>
-      <input type="text" id="username" name="username" required>
+              <div class="mb-4">
+                <label class="block mb-1 text-grey-700" for="signup-password"
+                  >Password:</label
+                >
+                <input
+                  class="shadow appearance-none border rounded w-full focus:outline-none focus:outline-stone-300"
+                  type="password"
+                  id="signup-password"
+                  name="signup-password"
+                  required
+                />
+              </div>
+              <div class="mb-0 text-center">
+                <input
+                  class="bg-blue-500 hover:bg-blue-700 text-white font-bold px-4 py-2 rounded"
+                  type="submit"
+                  value="Signup"
+                />
+              </div>
+            </fieldset>
+          </form>
+        </div>
 
-      <label for="email">E-mail: </label>
-      <input type="email" id="email" name="email" required>
-
-      <label for="fname">Full name: </label>
-      <input type="text" id="fname" name="fname" required>
-
-      <label for="password">Password:</label>
-      <input type="password" id="password" name="password" required>
-
-      <input type="submit" value="Signup">
-</div>
-</fieldset>
-</form>
-
-<form id="login">
-  <fieldset>
-    <legend>Login</legend>
-
-    <label for="username">Username:</label>
-    <input type="text" id="username" name="username">
-
-    <label for="password">Password:</label>
-    <input type="password" id="password" name="password">
-
-    <input type="submit" value="Login">
-
-  </fieldset>
-</form>
-</div>
-</body>
-
+        <div class="w-full max-w-xs p-4">
+          <form
+            id="login"
+            class="bg-white shadow-md rounded px-8 pt-6 pb-4"
+          >
+            <fieldset>
+              <legend class="font-bold text-2xl text-center mb-4">Login</legend>
+              <div class="mb-4">
+                <label class="block mb-1 text-grey-700" for="login-username"
+                  >Username:</label
+                >
+                <input
+                  class="shadow appearance-none border rounded w-full focus:outline-none focus:outline-stone-300"
+                  type="text"
+                  id="login-username"
+                  name="login-username"
+                />
+              </div>
+              <div class="mb-4">
+                <label class="block mb-1 text-grey-700" for="login-password"
+                  >Password:</label
+                >
+                <input
+                  class="shadow appearance-none border rounded w-full focus:outline-none focus:outline-stone-300"
+                  type="password"
+                  id="login-password"
+                  name="login-password"
+                />
+              </div>
+              <div class="text-center">
+                <input
+                  class="bg-blue-500 hover:bg-blue-700 text-white font-bold px-4 py-2 rounded text-right"
+                  type="submit"
+                  value="Login"
+                />
+              </div>
+            </fieldset>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
